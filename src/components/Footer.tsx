@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="pointer-events-none absolute -top-32 left-1/2 h-72 w-[60%] -translate-x-1/2 rounded-full bg-electric-500/15 blur-[120px]" />
       <div className="pointer-events-none absolute bottom-0 right-0 h-64 w-72 rounded-full bg-cantaloupe/10 blur-[100px]" />
 
-      <div className="container-px relative pb-10 pt-16">
+      <div className="container-px relative pb-28 pt-16 lg:pb-10">
         <div className="grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-4">
             <div className="flex items-center gap-2.5">

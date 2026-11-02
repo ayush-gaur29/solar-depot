@@ -4,6 +4,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ScrollToTop from '@/components/ScrollToTop';
 import BackToTop from '@/components/BackToTop';
+import MobileBottomNav from '@/components/MobileBottomNav';
 import Home from '@/pages/Home';
 import About from '@/pages/About';
 import Products from '@/pages/Products';
@@ -58,6 +59,7 @@ export default function App() {
         </main>
         <Footer />
         <BackToTop />
+        <MobileBottomNav />
       </div>
     </BrowserRouter>
   );
