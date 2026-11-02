@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+  }
+  body {
+    @apply bg-white font-sans text-navy antialiased;
+  }
+  ::selection {
+    @apply bg-electric-500/30 text-navy;
+  }
+}
+
+@layer components {
+  .container-px {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-12;
+  }
+  .glass-light {
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+  }
+  .glass-dark {
+    background: rgba(7, 27, 42, 0.55);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+  }
+  .glass-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(2, 151, 222, 0.15);
+  }
+  .glass-card-dark {
+    background: rgba(13, 30, 40, 0.6);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(2, 151, 222, 0.2);
+  }
+  .text-gradient-blue {
+    @apply bg-gradient-to-r from-electric-400 via-electric-500 to-electric-600 bg-clip-text text-transparent;
+  }
+  .text-gradient-orange {
+    @apply bg-gradient-to-r from-[#ff9a7b] via-cantaloupe-500 to-[#fd5e35] bg-clip-text text-transparent;
+  }
+  .text-gradient-orange-blue {
+    background: linear-gradient(115deg, #FC734D 0%, #ff9575 35%, #5ec7f8 70%, #0297DE 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-cantaloupe-500 px-6 py-3 text-sm font-semibold text-white shadow-orange transition-all duration-300 hover:bg-cantaloupe-600 hover:shadow-[0_0_40px_-6px_rgba(252,115,77,0.7)] active:scale-95;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-electric-500 px-6 py-3 text-sm font-semibold text-white shadow-glow transition-all duration-300 hover:bg-electric-600 hover:shadow-glow-lg active:scale-95;
+  }
+  .btn-ghost-light {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-electric-500/40 bg-white/60 px-6 py-3 text-sm font-semibold text-navy backdrop-blur transition-all duration-300 hover:border-electric-500 hover:bg-white active:scale-95;
+  }
+  .btn-ghost-dark {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-white/25 bg-white/5 px-6 py-3 text-sm font-semibold text-white backdrop-blur transition-all duration-300 hover:border-electric-400 hover:bg-white/10 active:scale-95;
+  }
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em];
+  }
+  .card-hover {
+    @apply transition-all duration-500 hover:-translate-y-1.5 hover:shadow-soft-lg;
+  }
+  .grid-bg {
+    background-image: linear-gradient(rgba(2, 151, 222, 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(2, 151, 222, 0.06) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+  .grid-bg-dark {
+    background-image: linear-gradient(rgba(2, 151, 222, 0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(2, 151, 222, 0.08) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f8;
+}
+::-webkit-scrollbar-thumb {
+  background: #0297de80;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0297de;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
